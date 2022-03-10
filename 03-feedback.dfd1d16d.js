@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a=document.querySelector("form.feedback-form"),l=document.querySelector('label [name="email"]'),o=document.querySelector('label [name="message"]'),r="feedback-form-state";function n(){const e={email:l.value,message:o.value};localStorage.setItem(r,JSON.stringify(e))}function s(){const e=JSON.parse(localStorage.getItem(r));e&&(l.value=e.email,o.value=e.message)}function u(e){e.preventDefault();const t=l.value,n=o.value;if(""==t||""==n)return alert("Заполните все поля!"),a.reset(),!1;const s={email:t,message:n};console.log(s),a.reset(),localStorage.removeItem(r)}a.addEventListener("input",(0,e.default)(n,500)),s(),a.addEventListener("submit",u);
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/parcel-project-template/03-feedback.dfd1d16d.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.dfd1d16d.js.map
